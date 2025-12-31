@@ -7,11 +7,24 @@
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<!-- NAVIGATION -->
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hero">
   <h1>Cristina Cuesta Bret<br><span>Mechanical Engineering</span></h1>
   <p>
     Mechanical Engineering student focused on <span class="blue">renewable energy</span>, 
@@ -26,55 +39,70 @@
 </section>
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section" id="about">
   <h2>About Me</h2>
   <p class="section-text">
     Mechanical engineering student with experience in structural design,
-  CAD modeling, and renewable energy systems. I have worked on
-  real-world engineering problems through research and multidisciplinary
-  team projects, including the design and optimization of components
-  for a solar electric vehicle.
-  <br><br>
-  My interests lie in developing efficient, reliable mechanical systems
-  with applications in sustainable energy and automotive engineering,
-  combining analytical rigor with practical design and manufacturability.
+    CAD modeling, and renewable energy systems. I have worked on
+    real-world engineering problems through research and multidisciplinary
+    team projects, including the design and optimization of components
+    for a solar electric vehicle.
+    <br><br>
+    My interests lie in developing efficient, reliable mechanical systems
+    with applications in sustainable energy and automotive engineering,
+    combining analytical rigor with practical design and manufacturability.
   </p>
-  
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <span>SolidWorks</span>
+    <span>FEA</span>
+    <span>CAD Design</span>
+    <span>Python</span>
+    <span>MATLAB</span>
+    <span>Renewable Energy</span>
+    <span>Manufacturing</span>
+    <span>Technical Writing</span>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section class="section" id="projects">
   <h2>Projects</h2>
-
   <div class="projects-grid">
 
     <div class="project-card">
-  <img src="torquearm.jpg" alt="Torque-Arm" class="project-img">
-  <h3>Torque-Arm Design & FEA</h3>
-  <p>Structural analysis and optimization of a torque-arm under bending stresses.</p>
-  <a href="EML4507 Project 2.pdf" target="_blank">View PDF →</a>
-</div>
+      <img src="torquearm.jpg" alt="Torque-Arm" class="project-img">
+      <h3>Torque-Arm Design & FEA</h3>
+      <p>Structural analysis and optimization of a torque-arm under bending stresses.</p>
+      <a href="EML4507 Project 2.pdf" target="_blank">View PDF →</a>
+    </div>
 
-<div class="project-card">
-  <img src="SinglePlateSW2.png" alt="Steering Wheel" class="project-img">
-  <h3>Solar Gators Steering Wheel</h3>
-  <p>Ergonomic and lightweight steering wheel design for a solar electric vehicle.</p>
-  <a href="Steering Wheel Project.pdf" target="_blank">View PDF →</a>
-</div>
+    <div class="project-card">
+      <img src="SinglePlateSW2.png" alt="Steering Wheel" class="project-img">
+      <h3>Solar Gators Steering Wheel</h3>
+      <p>Ergonomic and lightweight steering wheel design for a solar electric vehicle.</p>
+      <a href="Steering Wheel Project.pdf" target="_blank">View PDF →</a>
+    </div>
 
-<div class="project-card">
-  <img src="canopyhinge.jpg" alt="Canopy Hinge" class="project-img">
-  <h3>Canopy Hinge Mechanism</h3>
-  <p>Mechanical hinge design enabling smooth canopy deployment.</p>
-  <a href="Canopy Hinge.pdf" target="_blank">View PDF →</a>
-</div>
+    <div class="project-card">
+      <img src="canopyhinge.jpg" alt="Canopy Hinge" class="project-img">
+      <h3>Canopy Hinge Mechanism</h3>
+      <p>Mechanical hinge design enabling smooth canopy deployment.</p>
+      <a href="Canopy Hinge.pdf" target="_blank">View PDF →</a>
+    </div>
 
-<div class="project-card">
-  <img src="tennisracket.jpg" alt="Tennis Racket" class="project-img">
-  <h3>Material Selection – Tennis Racket</h3>
-  <p>Material selection analysis using Granta to optimize stiffness, weight, and performance.</p>
-  <a href="Materials paper.pdf" target="_blank">View PDF →</a>
-</div>
+    <div class="project-card">
+      <img src="tennisracket.jpg" alt="Tennis Racket" class="project-img">
+      <h3>Material Selection – Tennis Racket</h3>
+      <p>Material selection analysis using Granta to optimize stiffness, weight, and performance.</p>
+      <a href="Materials paper.pdf" target="_blank">View PDF →</a>
+    </div>
+
+  </div>
 </section>
 
 <!-- RESUME EMBED -->
@@ -87,15 +115,15 @@
 </section>
 
 <!-- CONTACT -->
-<section class="section contact">
+<section class="section contact" id="contact">
   <h2>Contact Me</h2>
   <p class="section-text">
     Interested in my work or want to connect?
   </p>
 
   <div class="button-group">
-    <a href="mailto:cristinacuestabret@gmail.com" class="btn">Email cristinacuestabret@gmail.com/a>
-    <a href="https://www.linkedin.com/in/cristinacuestabret/" class="btn secondary">LinkedIn</a>
+    <a href="mailto:cristinacuestabret@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Email Me</a>
+    <a href="https://www.linkedin.com/in/cristinacuestabret/" class="btn secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
   </div>
 </section>
 
