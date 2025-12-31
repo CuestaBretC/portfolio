@@ -127,5 +127,30 @@
   </div>
 </section>
 
+<script>
+  // Select all nav links and sections
+  const navLinks = document.querySelectorAll('.top-nav a');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80; // offset for fixed nav
+      if (pageYOffset >= sectionTop) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + currentSection) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+  
 </body>
 </html>
