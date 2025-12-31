@@ -9,13 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="light-mode">
 
 <!-- TOP NAVIGATION -->
 <nav class="top-nav">
   <div class="nav-container">
     <a href="#hero">Home</a>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
@@ -24,14 +24,14 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="hero">
+<section class="hero hero-light" id="hero">
   <h1>
     Cristina Cuesta Bret<br>
     <span>Mechanical Engineering</span>
   </h1>
 
   <p>
-    Mechanical Engineering student focused on
+    Mechanical Engineering student interested in
     <span class="blue">renewable energy</span>,
     <span class="blue">sustainable systems</span>, and
     <span class="blue">automotive engineering</span>.
@@ -87,27 +87,31 @@
       <h3>Torque-Arm Design & FEA</h3>
       <p>Structural analysis and optimization of a torque arm under bending loads.</p>
       <a href="eml4507-project-2.pdf" target="_blank">View PDF →</a>
+      <p><strong>Tools:</strong> Abaqus, FEA, Microsoft Word</p>
     </div>
 
     <div class="project-card">
       <img src="singleplatesw2.png" alt="Solar vehicle steering wheel">
       <h3>Solar Gators Steering Wheel</h3>
       <p>Ergonomic and lightweight steering wheel design for a solar electric vehicle.</p>
-      <a href="steering-wheel-project.pdf" target="_blank">View PDF →</a>
+      <a href="Steering Wheel Project.pdf" target="_blank">View PDF →</a>
+      <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
     </div>
 
     <div class="project-card">
       <img src="canopyhinge.jpg" alt="Canopy hinge mechanism">
       <h3>Canopy Hinge Mechanism</h3>
       <p>Mechanical hinge design enabling smooth canopy deployment.</p>
-      <a href="canopy-hinge.pdf" target="_blank">View PDF →</a>
+      <a href="Canopy Hinge.pdf" target="_blank">View PDF →</a>
+      <p><strong>Tools:</strong> SolidWorks</p>
     </div>
 
     <div class="project-card">
-      <img src="tennisracket.jpg" alt="Tennis racket material selection">
-      <h3>Material Selection – Tennis Racket</h3>
-      <p>Material selection analysis using Granta to optimize stiffness and weight.</p>
-      <a href="materials-paper.pdf" target="_blank">View PDF →</a>
+      <img src="pendulum.jpg" alt="Furuta Pendulum System">
+      <h3>Controlling a Furuta Pendulum</h3>
+      <p>Control of a Furuta Pendulum using dynamics and a full-state feedback controller.</p>
+      <a href="Controls.pdf" target="_blank">View PDF →</a>
+      <p><strong>Tools:</strong> MATLAB, LabVIEW, Microsoft Word</p>
     </div>
 
   </div>
@@ -123,7 +127,7 @@
   <iframe src="cristina-cuesta-bret-resume.pdf" width="100%" height="900px"></iframe>
 
   <div class="button-group" style="margin-top:24px">
-    <a href="cristina-cuesta-bret-resume.pdf" target="_blank" class="btn">
+    <a href="Cristina_CuestaBret_Resume.pdf" target="_blank" class="btn">
       Download Resume (PDF)
     </a>
   </div>
@@ -146,8 +150,30 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2025 Cristina Cuesta Bret · Mechanical Engineering Portfolio</p>
+  <p>© 2025 Cristina Cuesta Bret. All rights reserved.</p>
 </footer>
+
+  <script>
+  const body = document.body;
+  const hero = document.querySelector('#hero');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+      } else {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+      }
+    },
+    {
+      threshold: 0.4
+    }
+  );
+
+  observer.observe(hero);
+</script>
 
 </body>
 </html>
