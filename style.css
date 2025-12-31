@@ -17,75 +17,79 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
-  color: var(--white);
-  overflow-x: hidden;
+  color: var(--accent);
 }
 
 /* ---------- LAYOUT ---------- */
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 72px 32px;
+  padding: 140px 32px;
 }
 
 /* ---------- HERO ---------- */
 .hero {
-  padding-top: 120px;
-  padding-bottom: 96px;
+  padding-top: 180px;
+  padding-bottom: 200px;
+  text-align: left;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 500;
-  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
 }
 
 .hero span {
-  font-size: 1.1rem;
   color: var(--muted);
 }
 
 .hero p {
   max-width: 720px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: var(--muted);
 }
 
 /* ---------- BUTTONS ---------- */
 .button-group {
-  margin-top: 40px;
+  margin-top: 60px;
   display: flex;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 26px;
-  border: 1px solid var(--white);
-  background: transparent;
-  color: var(--white);
-  font-weight: 400;
+  padding: 14px 28px;
   border-radius: 2px;
-  transition: background 0.25s ease, color 0.25s ease;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-weight: 400;
+  transition: background 0.3s ease, border 0.3s ease;
 }
 
 .btn:hover {
-  background: var(--white);
-  color: #000;
+  background: #141414;
+  border-color: var(--accent);
+}
+
+.btn.secondary {
+  color: var(--muted);
 }
 
 /* ---------- HEADINGS ---------- */
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 /* ---------- TEXT ---------- */
 .section-text {
   max-width: 760px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--muted);
 }
@@ -94,15 +98,55 @@ h2 {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
+  gap: 18px;
   max-width: 900px;
 }
 
 .skills-grid span {
-  padding-bottom: 10px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--accent);
 }
 
 /* ---------- PROJECTS ---------- */
-.projects-gri
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+}
+
+.project-card {
+  padding-top: 10px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+}
+
+.project-card a:hover {
+  border-color: var(--accent);
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  text-align: left;
+  padding-bottom: 200px;
+}
