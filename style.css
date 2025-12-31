@@ -37,3 +37,32 @@ section {
   font-size: 0.95rem;
   vertical-align: middle;
 }
+
+/* ---------- PROJECT CARD HOVER EFFECT ---------- */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 170, 255, 0.2);
+}
+
+.project-card h3 {
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+  color: #00aaff; /* Blue accent on hover */
+}
+
+/* Optional: slight zoom on image hover */
+.project-card img {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
