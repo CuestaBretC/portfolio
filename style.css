@@ -218,6 +218,22 @@ h2::after {
   font-size: 0.9rem;
 }
 
+.skills-group {
+  margin-bottom: 48px;
+}
+
+.skills-group h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: var(--white);
+}
+
+body.light-mode .skills-group h3 {
+  color: #000;
+}
+
+
 /* PROJECTS */
 .projects-grid {
   display: grid;
