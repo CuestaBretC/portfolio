@@ -3,62 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cristina Cuesta Bret | Mechanical Engineering</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Cristina Cuesta Bret | Engineering Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>
-      Cristina Cuesta Bret<br>
-      <span>Mechanical Engineering</span>
-    </h1>
+<!-- HERO -->
+<section class="hero">
+  <h1>Cristina Cuesta Bret<br><span>Mechanical Engineering</span></h1>
+  <p>
+    Mechanical Engineering student focused on <span class="blue">renewable energy</span>, 
+    <span class="blue">sustainable systems</span>, and <span class="blue">automotive engineering</span>.
+  </p>
 
-    <p>
-      Mechanical engineering student with experience in structural design,
-      CAD modeling, and renewable energy systems, focused on developing
-      efficient and reliable mechanical solutions.
-    </p>
+  <div class="button-group">
+    <a href="#resume" class="btn">Resume</a>
+    <a href="#projects" class="btn">Projects</a>
+    <a href="https://www.linkedin.com/in/cristinacuestabret/" class="btn secondary">LinkedIn</a>
+  </div>
+</section>
 
-    <div class="button-group">
-      <a href="projects.html" class="btn">Projects</a>
-      <a href="Cristina_CuestaBret_Resume.pdf" target="_blank" class="btn">Resume</a>
-      <a href="https://www.linkedin.com/in/cristinacuestabret/" target="_blank" class="btn">LinkedIn</a>
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <p class="section-text">
+    I am a mechanical engineering student with hands-on experience in
+    <span class="blue">CAD design</span>, <span class="blue">FEA</span>, and <span class="blue">renewable energy systems</span>. 
+    Through projects like Solar Gators, I have worked on real-world challenges involving design optimization, manufacturability, and performance.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="data:image/png;base64,PLACEHOLDER_IMAGE_1" alt="Torque-Arm" class="project-img">
+      <h3>Torque-Arm Design & FEA</h3>
+      <p>
+        Structural analysis and optimization of a torque-arm under bending stresses.
+      </p>
+      <a href="EML4507 Project 2.pdf" target="_blank">View PDF →</a>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About</h2>
-    <p class="section-text">
-      Mechanical engineering student with hands-on experience in CAD design,
-      structural analysis, and renewable energy systems. Through academic
-      research and multidisciplinary team projects, including work on a
-      solar electric vehicle, I have applied engineering fundamentals to
-      real-world design challenges.
-      <br><br>
-      My interests include sustainable energy systems and automotive
-      engineering, with a focus on analytical rigor, practical design,
-      and manufacturability.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <span>SolidWorks</span>
-      <span>CAD Design</span>
-      <span>FEA</span>
-      <span>Python</span>
-      <span>MATLAB</span>
-      <span>Manufacturing</span>
-      <span>Renewable Energy Systems</span>
-      <span>Technical Documentation</span>
+    <div class="project-card">
+      <img src="data:image/png;base64,PLACEHOLDER_IMAGE_2" alt="Steering Wheel" class="project-img">
+      <h3>Solar Gators Steering Wheel</h3>
+      <p>
+        Ergonomic and lightweight steering wheel design for a solar electric vehicle.
+      </p>
+      <a href="Steering Wheel Project.pdf" target="_blank">View PDF →</a>
     </div>
-  </section>
+
+    <div class="project-card">
+      <img src="data:image/png;base64,PLACEHOLDER_IMAGE_3" alt="Latching System" class="project-img">
+      <h3>Solar Gators Latching System</h3>
+      <p>
+        Primary attachment mechanism optimized for safety, reliability, and ease of manufacturing.
+      </p>
+      <a href="Project 1 - Solar Gators.pdf" target="_blank">View PDF →</a>
+    </div>
+
+    <div class="project-card">
+      <img src="data:image/png;base64,PLACEHOLDER_IMAGE_4" alt="Canopy Hinge" class="project-img">
+      <h3>Canopy Hinge Mechanism</h3>
+      <p>
+        Mechanical hinge design enabling smooth canopy deployment.
+      </p>
+      <a href="Canopy Hinge.pdf" target="_blank">View PDF →</a>
+    </div>
+
+    <div class="project-card">
+      <img src="data:image/png;base64,PLACEHOLDER_IMAGE_5" alt="Tennis Racket" class="project-img">
+      <h3>Material Selection – Tennis Racket</h3>
+      <p>
+        Material selection analysis using Granta to optimize stiffness, weight, and performance.
+      </p>
+      <a href="Materials paper.pdf" target="_blank">View PDF →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESUME EMBED -->
+<section class="section" id="resume">
+  <h2>Resume</h2>
+  <p class="section-text">
+    View my resume directly below.
+  </p>
+  <iframe src="Cristina_CuestaBret_Resume.pdf" width="100%" height="900px"></iframe>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+  <h2>Contact</h2>
+  <p class="section-text">
+    Interested in my work or want to connect?
+  </p>
+
+  <div class="button-group">
+    <a href="mailto:cristinacuestabret@gmail.com" class="btn">Email: cristinacuestabret@gmail.com/a>
+    <a href="https://www.linkedin.com/in/cristinacuestabret/" class="btn secondary">LinkedIn</a>
+  </div>
+</section>
 
 </body>
 </html>
