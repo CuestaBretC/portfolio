@@ -224,9 +224,20 @@ h2::after {
 
 .skills-group h3 {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 18px;
-  color: var(--white);
+  color: var(--blue);
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.skills-group h3::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--blue);
+  margin-top: 8px;
 }
 
 body.light-mode .skills-group h3 {
