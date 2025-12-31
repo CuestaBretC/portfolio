@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
-  color: var(--white);
+  color: var(--blue);
 }
 
 /* ---------- LAYOUT ---------- */
@@ -109,7 +109,7 @@ h2 {
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
   font-size: 0.95rem;
-  color: var(--blue);
+  color: var(--white);
 }
 
 /* ---------- PROJECTS ---------- */
@@ -132,14 +132,14 @@ h2 {
 .project-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--blue);
+  color: var(--white);
 }
 
 .project-card a {
   display: inline-block;
   margin-top: 16px;
   font-size: 0.9rem;
-  color: var(--white);
+  color: var(--blue);
   border-bottom: 1px solid var(--border);
   padding-bottom: 4px;
 }
