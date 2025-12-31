@@ -1,12 +1,10 @@
 :root {
   --bg: #0a0a0a;
-  --panel: #111111;
   --border: #1f1f1f;
   --white: #ffffff;
   --blue: #3a7cff;
   --muted: #9a9a9a;
 }
-
 
 * {
   box-sizing: border-box;
@@ -20,7 +18,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
-  color: var(--blue);
+  color: var(--white);
 }
 
 /* ---------- LAYOUT ---------- */
@@ -34,18 +32,17 @@ section {
 .hero {
   padding-top: 180px;
   padding-bottom: 200px;
-  text-align: left;
 }
 
 .hero h1 {
   font-size: 3.2rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
   margin-bottom: 20px;
 }
 
 .hero span {
   color: var(--muted);
+  font-size: 1.2rem;
 }
 
 .hero p {
@@ -70,11 +67,9 @@ section {
   border: 1px solid var(--border);
   color: var(--white);
   font-weight: 400;
-  transition: background 0.3s ease, border 0.3s ease;
 }
 
 .btn:hover {
-  background: #141414;
   border-color: var(--white);
 }
 
@@ -87,6 +82,7 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 40px;
+  color: var(--blue);
 }
 
 /* ---------- TEXT ---------- */
@@ -109,7 +105,6 @@ h2 {
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
   font-size: 0.95rem;
-  color: var(--white);
 }
 
 /* ---------- PROJECTS ---------- */
@@ -119,8 +114,12 @@ h2 {
   gap: 60px;
 }
 
-.project-card {
-  padding-top: 10px;
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 18px;
+  border: 1px solid var(--border);
 }
 
 .project-card h3 {
@@ -132,7 +131,7 @@ h2 {
 .project-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--white);
+  color: var(--muted);
 }
 
 .project-card a {
@@ -145,21 +144,18 @@ h2 {
 }
 
 .project-card a:hover {
-  border-color: var(--white);
+  border-color: var(--blue);
 }
 
-/* ---------- CONTACT ---------- */
-.contact {
-  text-align: left;
-  padding-bottom: 200px;
-}
-
-/* ---------- PROJECT IMAGES ---------- */
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 18px;
-  border-radius: 2px;
+/* ---------- RESUME ---------- */
+.resume-container {
+  margin-top: 48px;
   border: 1px solid var(--border);
+}
+
+.resume-container iframe {
+  width: 100%;
+  height: 900px;
+  border: none;
+  background: #000;
 }
