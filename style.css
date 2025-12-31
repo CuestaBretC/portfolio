@@ -41,7 +41,7 @@ section {
 }
 
 .hero span {
-  color: var(--muted);
+  color: var(--white);
   font-size: 1.2rem;
 }
 
@@ -49,7 +49,7 @@ section {
   max-width: 720px;
   font-size: 1.15rem;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--white);
 }
 
 /* ---------- BUTTONS ---------- */
@@ -76,7 +76,7 @@ section {
 }
 
 .btn.secondary {
-  color: var(--muted);
+  color: var(--white);
 }
 
 /* ---------- HEADINGS ---------- */
@@ -84,7 +84,7 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 40px;
-  color: var(--blue);
+  color: var(--white);
 }
 
 /* ---------- TEXT ---------- */
@@ -92,7 +92,7 @@ h2 {
   max-width: 760px;
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--muted);
+  color: var(--white);
 }
 
 /* ---------- SKILLS ---------- */
@@ -133,7 +133,7 @@ h2 {
 .project-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--white);
 }
 
 .project-card a {
