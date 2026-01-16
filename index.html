@@ -1,663 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristina Cuesta Bret | Mechanical Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0d3b66;
-            --accent: #00a896;
-            --accent-light: #02c39a;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --card-bg: #ffffff;
-            --text: #2d3436;
-            --text-muted: #636e72;
-            --gradient-start: #0d3b66;
-            --gradient-end: #00a896;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristina Cuesta Bret | Mechanical Engineer</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <style>
+    :root {
+      --primary: #0d3b66;
+      --accent: #00a896;
+      --accent-light: #02c39a;
+      --dark: #1a1a2e;
+      --light: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #2d3436;
+      --text-muted: #636e72;
+    }
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            padding: 0.5rem 0;
-            transition: color 0.3s ease;
-        }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            transition: width 0.3s ease;
-        }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
 
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      position: relative;
+    }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      transition: width 0.3s ease;
+    }
 
-        /* Hero Section */
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 6rem 2rem 4rem;
-            background: linear-gradient(135deg, var(--light) 0%, #e8f4f8 100%);
-            overflow: hidden;
-        }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-        .hero-bg-shape {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 168, 150, 0.08), rgba(13, 59, 102, 0.05));
-            top: -200px;
-            right: -200px;
-            animation: float 8s ease-in-out infinite;
-        }
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7rem 2rem 4rem;
+      background: linear-gradient(135deg, #f8f9fa, #e8f4f8);
+      text-align: center;
+    }
 
-        .hero-bg-shape-2 {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(13, 59, 102, 0.06), rgba(0, 168, 150, 0.03));
-            bottom: -150px;
-            left: -100px;
-            animation: float 10s ease-in-out infinite reverse;
-        }
+    .hero-content {
+      max-width: 800px;
+      animation: fadeInUp 1s ease;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(5deg); }
-        }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .hero-content {
-            text-align: center;
-            max-width: 800px;
-            z-index: 1;
-            animation: fadeInUp 1s ease-out;
-        }
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
 
-        .hero-badge {
-            display: inline-block;
-            padding: 0.5rem 1.2rem;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border-radius: 50px;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-        }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
 
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            color: var(--primary);
-            margin-bottom: 1rem;
-            line-height: 1.1;
-            letter-spacing: -1px;
-        }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
+    .btn-secondary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: white;
+    }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), #164b7a);
-            color: white;
-            box-shadow: 0 4px 20px rgba(13, 59, 102, 0.3);
-        }
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+    }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(13, 59, 102, 0.4);
-        }
+    /* SECTIONS */
+    section {
+      padding: 6rem 2rem;
+    }
 
-        .btn-secondary {
-            background: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
 
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
+    .section-label {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-        .btn-linkedin {
-            background: #0077b5;
-            color: white;
-            box-shadow: 0 4px 20px rgba(0, 119, 181, 0.3);
-        }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--primary);
+    }
 
-        .btn-linkedin:hover {
-            background: #005a8b;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 119, 181, 0.4);
-        }
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        /* Projects Section */
-        #projects {
-            padding: 6rem 2rem;
-            background: white;
-            position: relative;
-        }
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease;
+    }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
 
-        .section-label {
-            display: inline-block;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0.75rem;
-        }
+    .project-thumb img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--primary);
-            letter-spacing: -0.5px;
-        }
+    .project-content {
+      padding: 1.5rem;
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
 
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            position: relative;
-        }
+    .project-description {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+    .project-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-        }
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
 
-        .project-card:hover::before {
-            opacity: 1;
-        }
+    footer p {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
 
-        .project-icon {
-            width: 100%;
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            font-size: 4rem;
-        }
-
-        .project-card:nth-child(1) .project-icon { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
-        .project-card:nth-child(2) .project-icon { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-        .project-card:nth-child(3) .project-icon { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
-        .project-card:nth-child(4) .project-icon { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
-        .project-card:nth-child(5) .project-icon { background: linear-gradient(135deg, #e0f7fa, #b2ebf2); }
-
-        .project-content {
-            padding: 1.75rem;
-        }
-
-        .project-tag {
-            display: inline-block;
-            padding: 0.35rem 0.85rem;
-            background: rgba(0, 168, 150, 0.1);
-            color: var(--accent);
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 50px;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .project-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
-        }
-
-        .project-description {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: var(--accent);
-            gap: 0.75rem;
-        }
-
-        .project-link svg {
-            transition: transform 0.3s ease;
-        }
-
-        .project-link:hover svg {
-            transform: translateX(3px);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-text {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .footer-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-link:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .footer-divider {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            margin: 2rem auto;
-        }
-
-        .footer-copy {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.85rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 280px;
-                justify-content: center;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                padding: 0 1rem;
-            }
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="#home" class="nav-logo">CCB</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="Cristina_CuestaBret_Resume.pdf" target="_blank">Resume</a></li>
-        </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="hero-bg-shape"></div>
-        <div class="hero-bg-shape-2"></div>
-        <div class="hero-content">
-            <span class="hero-badge">🌱 Renewable & Sustainable Engineering</span>
-            <span class="hero-badge">⚙️ Mechanical Engineering</span>
-            <h1 class="hero-title">Cristina Cuesta Bret</h1>
-            <p class="hero-subtitle">Mechanical engineering student passionate about combining innovative design with renewable energy solutions and the automotive industry.</p>
-            <div class="hero-cta">
-                <a href="Cristina_CuestaBret_Resume.pdf" target="_blank" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    View Resume
-                </a>
-                <a href="https://www.linkedin.com/in/cristinacuestabret/" target="_blank" class="btn btn-linkedin">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    LinkedIn
-                </a>
-                <a href="#projects" class="btn btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    View Projects
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">CCB</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="section-header">
-            <span class="section-label">Portfolio</span>
-            <h2 class="section-title">Engineering Projects</h2>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-icon">⚙️</div>
-                <div class="project-content">
-                    <span class="project-tag">FEA Analysis</span>
-                    <h3 class="project-title">Analysis and Design of a Torque-Arm</h3>
-                    <p class="project-description">Comprehensive FEA analysis and design report for a torque-arm component under bending stress conditions.</p>
-                    <a href="EML4507 Project 2.pdf" target="_blank" class="project-link">
-                        View Project
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-            </div>
+<!-- HERO -->
+<section id="home">
+  <div class="hero-content">
+    <span class="hero-badge">Mechanical & Sustainable Engineering</span>
+    <h1 class="hero-title">Cristina Cuesta Bret</h1>
+    <p class="hero-subtitle">
+      Mechanical engineering student passionate about renewable energy,
+      sustainable systems, and automotive engineering.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="Cristina_CuestaBret_Resume.pdf" target="_blank" class="btn btn-secondary">Resume</a>
+    </div>
+  </div>
+</section>
 
-            <div class="project-card fade-in">
-                <div class="project-icon">☀️</div>
-                <div class="project-content">
-                    <span class="project-tag">Solar Gators</span>
-                    <h3 class="project-title">Steering Wheel Design</h3>
-                    <p class="project-description">Currently designing an ergonomic and functional steering wheel for the Solar Gators solar electric vehicle team.</p>
-                    <a href="Steering Wheel Project.pdf" target="_blank" class="project-link">
-                        View Project
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-            </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-label">About</span>
+    <h2 class="section-title">About Me</h2>
+  </div>
+  <p style="max-width:800px;margin:0 auto;text-align:center;color:var(--text-muted)">
+    Mechanical engineering student with experience in CAD modeling, structural
+    design, and renewable energy systems. I’ve worked on real-world engineering
+    problems through research and multidisciplinary team projects, including
+    the design of components for a solar electric vehicle.
+  </p>
+</section>
 
-            <div class="project-card fade-in">
-                <div class="project-icon">🔧</div>
-                <div class="project-content">
-                    <span class="project-tag">Solar Gators</span>
-                    <h3 class="project-title">Latching System</h3>
-                    <p class="project-description">Designed and optimized the primary attachment system ensuring secure and reliable connections for the solar vehicle.</p>
-                    <a href="Project 1 - Solar Gators.pdf" target="_blank" class="project-link">
-                        View Project
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-            </div>
+<!-- SKILLS -->
+<section id="skills" style="background:#f8fafc">
+  <div class="section-header">
+    <span class="section-label">Expertise</span>
+    <h2 class="section-title">Skills & Experience</h2>
+  </div>
 
-            <div class="project-card fade-in">
-                <div class="project-icon">🚗</div>
-                <div class="project-content">
-                    <span class="project-tag">Solar Gators</span>
-                    <h3 class="project-title">Canopy Hinge Mechanism</h3>
-                    <p class="project-description">Engineered the canopy hinge mechanism enabling smooth operation and secure closure for the vehicle's canopy.</p>
-                    <a href="Canopy Hinge.pdf" target="_blank" class="project-link">
-                        View Project
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-            </div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Software</h3>
+        <p class="project-description">SolidWorks, MATLAB, Python, Abaqus, ANSYS, Fusion 360, Granta</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Technical</h3>
+        <p class="project-description">FEA, CAD Design, Manufacturing, Renewable Energy Systems</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Certifications & Honors</h3>
+        <p class="project-description">SolidWorks Certification, CNC Machining Training, Dean’s List</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="project-card fade-in">
-                <div class="project-icon">🎾</div>
-                <div class="project-content">
-                    <span class="project-tag">Materials Science</span>
-                    <h3 class="project-title">Material Selection for Tennis Racket</h3>
-                    <p class="project-description">Comprehensive material selection analysis for a tennis racket using Granta software and engineering principles.</p>
-                    <a href="Materials paper.pdf" target="_blank" class="project-link">
-                        View Project
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header">
+    <span class="section-label">Portfolio</span>
+    <h2 class="section-title">Engineering Projects</h2>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <h3 class="footer-title">Let's Connect</h3>
-            <p class="footer-text">Interested in discussing sustainable engineering solutions or collaboration opportunities? I'd love to hear from you.</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/cristinacuestabret/" target="_blank" class="footer-link" title="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="Cristina_CuestaBret_Resume.pdf" target="_blank" class="footer-link" title="Resume">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                </a>
-            </div>
-            <div class="footer-divider"></div>
-            <p class="footer-copy">©️ 2025 Cristina Cuesta Bret. Built with passion for engineering.</p>
-        </div>
-    </footer>
+  <div class="projects-grid">
 
-    <script>
-        // Scroll animation for project cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="torquearm.jpg" alt="Torque arm FEA">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Torque-Arm Design & FEA</h3>
+        <p class="project-description">Structural analysis and optimization under bending loads.</p>
+        <a href="eml4507-project-2.pdf" target="_blank" class="project-link">View PDF →</a>
+      </div>
+    </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="SteeringWheel.jpg" alt="Steering wheel design">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Solar Gators Steering Wheel</h3>
+        <p class="project-description">Ergonomic and lightweight steering wheel design.</p>
+        <a href="Steering Wheel Project.pdf" target="_blank" class="project-link">View PDF →</a>
+      </div>
+    </div>
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="canopyhinge.jpg" alt="Canopy hinge mechanism">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Canopy Hinge Mechanism</h3>
+        <p class="project-description">Smooth deployment hinge for a solar vehicle canopy.</p>
+        <a href="Canopy Hinge.pdf" target="_blank" class="project-link">View PDF →</a>
+      </div>
+    </div>
 
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="Controls.jpg" alt="Furuta pendulum control">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Furuta Pendulum Control</h3>
+        <p class="project-description">State-space modeling and controller design.</p>
+        <a href="Controls.pdf" target="_blank" class="project-link">View PDF →</a>
+      </div>
+    </div>
 
-        // Navbar background change on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-            } else {
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
-            }
-        });
-    </script>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" style="background:#f8fafc">
+  <div class="section-header">
+    <span class="section-label">Resume</span>
+    <h2 class="section-title">My Resume</h2>
+  </div>
+
+  <div style="max-width:900px;margin:0 auto">
+    <iframe src="Cristina_CuestaBret_Resume.pdf" width="100%" height="900" style="border-radius:12px;border:1px solid #ddd"></iframe>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title">Let’s Connect</h2>
+  </div>
+
+  <div class="hero-cta">
+    <a href="mailto:cristinacuestabret@gmail.com" class="btn btn-primary">Email Me</a>
+    <a href="https://www.linkedin.com/in/cristinacuestabret/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Cristina Cuesta Bret · Engineering Portfolio</p>
+</footer>
+
 </body>
 </html>
