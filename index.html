@@ -240,6 +240,25 @@
       text-decoration: none;
     }
 
+        /* SKILLS TAGS FIX */
+    .skill-tags {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.6rem 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-tags span {
+      padding: 0.45rem 0.9rem;
+      background: #f1f7fb;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #0d3b66;
+      border: 1px solid rgba(13,59,102,0.1);
+    }
+
+    
     /* FOOTER */
     footer {
       background: var(--dark);
@@ -279,7 +298,7 @@
 <!-- HERO -->
 <section id="home">
   <div class="hero-content">
-    <span class="hero-badge">🌱 Renewable & Sustainable Engineering</span>
+    <span class="hero-badge">🌱 Renewable Energy & Sustainable Engineering</span>
     <span class="hero-badge">⚙️ Mechanical Engineering</span>
     <h1 class="hero-title">Cristina Cuesta Bret</h1>
     <p class="hero-subtitle">
@@ -302,7 +321,7 @@
   <p style="max-width:800px;margin:0 auto;text-align:center;color:var(--text-muted)">
     Mechanical engineering student with experience in CAD modeling, structural
     design, and renewable energy systems. I’ve worked on real-world engineering
-    problems through research and multidisciplinary team projects, including
+    problems through internships, research, and multidisciplinary team projects, including
     the design of components for a solar electric vehicle.
   </p>
 </section>
@@ -315,72 +334,75 @@
   </div>
 
   <div class="project-card">
-  <div class="project-content">
-    <h3 class="project-title">Software</h3>
-    <div class="skill-tags">
-      <span>SolidWorks</span>
-      <span>MATLAB</span>
-      <span>Python</span>
-      <span>Abaqus</span>
-      <span>Microsoft Office</span>
-      <span>Fusion 360</span>
-      <span>Granta</span>
-    </div>
-  </div>
-</div>
-
-<div class="project-card">
-  <div class="project-content">
-    <h3 class="project-title">Technical</h3>
-    <div class="skill-tags">
-      <span>3D CAD</span>
-      <span>2D Drawings & Design</span>
-      <span>Manufacturing</span>
-      <span>Structural Analysis</span>
-      <span>FEA</span>
-      <span>Programming</span>
-      <span>Material Selection</span>
-    </div>
-  </div>
-</div>
-
-<div class="project-card">
-  <div class="project-content">
-    <h3 class="project-title">Certifications</h3>
-    <div class="skill-tags">
-      <span>SolidWorks</span>
-      <span>ACE CNC Machining Training</span>
-      <span>Cambridge Proficiency in English (C2)</span>
+    <div class="project-content">
+      <h3 class="project-title">Software</h3>
+      <div class="skill-tags">
+        <span>SolidWorks</span>
+        <span>MATLAB</span>
+        <span>Python</span>
+        <span>Abaqus</span>
+        <span>Microsoft Office</span>
+        <span>Fusion 360</span>
+        <span>Granta</span>
       </div>
     </div>
   </div>
-<div class="project-card">
-  <div class="project-content">
-    <h3 class="project-title">Honors & Leadership</h3>
-    <div class="skill-tags">
-      <span> Herbert Werheim College of Engineering Dean’s List</span>
-      <span>UF Club Tennis President</span>
-      <span>Mechanical Design Capston Deputy Lead</span>
-      <span>Honors Thesis</span>
-      </div>
-    </div>
-  </div>
+
   <div class="project-card">
-  <div class="project-content">
-    <h3 class="project-title">Languages</h3>
-    <div class="skill-tags">
-      <span>English (Fluent)</span>
-      <span>Spanish (Native)</span>
+    <div class="project-content">
+      <h3 class="project-title">Technical</h3>
+      <div class="skill-tags">
+        <span>3D CAD</span>
+        <span>2D Drawings & Design</span>
+        <span>Manufacturing</span>
+        <span>Structural Analysis</span>
+        <span>FEA</span>
+        <span>Programming</span>
+        <span>Material Selection</span>
       </div>
     </div>
   </div>
-    <div class="project-card">
-  <div class="project-content">
-    <h3 class="project-title">Clubs</h3>
-    <div class="skill-tags">
-      <span>Solar Gators</span>
-      <span>SHPE (Society of Hispanic Professional Engineers)</span>
-      <span>University of Florida Club Tennis</span>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h3 class="project-title">Certifications</h3>
+      <div class="skill-tags">
+        <span>SolidWorks</span>
+        <span>ACE CNC Machining Training</span>
+        <span>Cambridge Proficiency in English (C2)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h3 class="project-title">Honors & Leadership</h3>
+      <div class="skill-tags">
+        <span>Herbert Werheim College of Engineering Dean’s List</span>
+        <span>UF Club Tennis President</span>
+        <span>Mechanical Design Capstone Deputy Lead</span>
+        <span>Honors Thesis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h3 class="project-title">Languages</h3>
+      <div class="skill-tags">
+        <span>English (Fluent)</span>
+        <span>Spanish (Native)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h3 class="project-title">Clubs</h3>
+      <div class="skill-tags">
+        <span>Solar Gators</span>
+        <span>SHPE (Society of Hispanic Professional Engineers)</span>
+        <span>University of Florida Club Tennis</span>
       </div>
     </div>
   </div>
